@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<head>
+    <title>car rental system</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style_v2.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'/>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+</head>
+
+<body class="">
+    <header class="header" id="header">
+        <div class="logoheader">
+            <img class="logo" id="mainLogo" src="image/logo.png" alt="car rental system logo" width="80" height="80"style="float: left; margin-right: 2 rem;">
+            <a href="#" id="logoName" class="logo">CAR RENTAL AUSTRALIA</a>
+        </div>
+
+        <div class="first_row" style="display: block;">
+            <form class=search_bar id="search_form" style="display: inline-block;">
+                <input type="search" class="search_focus" id="search_keyword" name="search_bar" placeholder="Search for..." style="display: inline-block;"/> 
+                <label for="search_keyword" class="fa fa-search"></label>
+                <input type="submit" id="search_button"  value="search" style="display: inline-block; font-size: 1.7rem;"/>  
+            </form>
+            <div id="recentKeywords" class="dropdown-content" style="display: none;"></div>
+        </div>
+
+
+        <nav class="navbar" id="navbar">
+            <ul class="nav_list">
+                <li class="nav_item">
+                    <a href="#home" id="home_tag" class="home_link nav_link">Home</a>
+                </li>
+                <li class="nav_item  branddropdown"><a href="#brands" id="brands_link" class="nav_link  dropdown_link">Brands<i class='bx bxs-chevron-down dropdown_icon'></i></a>
+
+                    <div class= "megamenu brandClass">
+                        <ul class="content">
+                            <li class= "megamenu_item header_megamenu"></li>
+                            <li class="megamenu_item">
+                                <div class="megamenu_link">
+                                    <a href="#">BMW</a>
+                                </div>
+                            </li>
+
+                            <li class="megamenu_item">
+                                <div class="megamenu_link">
+                                    <a href="#">Ford</a>
+                                </div>
+                            </li>
+
+                            <li class="megamenu_item">
+                                <div class="megamenu_link">
+                                    <a href="#">Mazda</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="nav_item typedropdown"><a href="#types" id="types_link" class="nav_link dropdown_link">Types<i class='bx bxs-chevron-down dropdown_icon'></i></a>
+                    <div class= "megamenu typeClass">
+                        <ul class="content">
+                            <li class= "megamenu_item header_megamenu"></li>
+                            <li class="megamenu_item">
+                                <div class="megamenu_link">
+                                    <a href="#">Sedan</a>
+                                </div>
+                            </li>
+
+                            <li class="megamenu_item">
+                                <div class="megamenu_link">
+                                    <a href="#">Wagon</a>
+                                </div>
+                            </li>
+
+                            <li class="megamenu_item">
+                                <div class="megamenu_link">
+                                    <a href="#">SUV</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>    
+
+        </nav>
+
+        <nav>
+            <div class="icons">
+                <div class="cart-container">
+                <!--div class="fa fa-search" id="search-button"></div-->
+                    <div id="cart-button">Reservation</div>
+                </div>        
+            </div>
+        </nav>
+
+        <div id="searchResults" style="display: block;"></div>
+
+    </header>   
+
+
+    <div class="content">
+        <div id="productlistTitle" class="productlist" style="display: block;">CAR FOR RENTAL</div>
+        <div>
+            <div class="listProduct" id="contentList">
+                <!--div class="item">
+                    <h1 id='car_brand'>BMW</h1>
+                    <h2 id='car_model'>X6 M 2018</h2> 
+                    <h2 id='car_type'>Sedan</h2> 
+                    <img id="1000" src="image/BMW_sedan_2018 BMW X6 M.png" alt="">
+                    <div class="car-details">
+                          <i class="ri-dashboard-3-line  car_icon"></i><span class="car-info" id='car_mileage'>15000</span>
+                          <i class="ri-charging-pile-2-line  car_icon"></i><span class="car-info" id='car_fuel_type'>petrol</span>
+                          <i class="ri-sofa-line car_icon"></i><span class="car-info" id='car_seats'>5</span>
+                    </div>
+                    <h3 class="price">$220</h3> 
+                    <h3 class="description">" Luxury sedan with high performance. "</h3> 
+                    <h4 class='quantity'>Available Quantity: 1</h4>
+                    <h5>'Yes'</h5>
+                    <button class="addCart">Rent</button>
+                    <span class='warning'></span>
+                </div-->
+
+            </div>
+        </div>    
+    </div>
+ 
+
+
+    <div class="cartTab">
+        <div class="cartTitle">
+            <h1>Reservation List</h1> 
+            <i class='bx bx-x close'></i>
+        </div>
+        <div class="listCart">
+            <div class="item">
+                <!--div class="image">
+                     <img id="1001" src="image/BMW_sedan_2018 BMW X6 M.png" alt="">  
+                </div>
+                <div id="car_brand">
+                    Brand: BMW
+                </div>
+                <div id="car_model">
+                    Model: X6 M 2018
+                </div>
+                <div id="car_type">
+                    Type: Sedan
+                </div>
+
+                <div class="Price">
+                     $200 / Day
+                </div> 
+                <div id="car_mileage">
+                    Mileage: 15000
+                </div>
+                <div id="car_fuel_type">
+                    Fuel type:  Petrol
+                </div>
+                <div id="car_seats">
+                    Seats:  5
+                </div>   
+                <form>
+                    <label for="start">Start date:</label>
+                    <input type="date" id="start" name="start" value="2024-01-01">
+                </form>
+                <form>
+                    <label for="end">End date:</label>
+                    <input type="date" id="end" name="end" value="2024-01-01">
+            
+                </form>
+
+                <div class="quantity">Quantity: 
+                    <span class="minus">-</span>
+                    <span>1</span>
+                    <span class="plus">+</span>
+                </div--> 
+            </div>
+        </div>
+        
+        <div class="personalTab">
+            <div class="contactInfo">
+                <h1>Contact Information</h1>
+            </div>
+            <div class="form">
+                <div class="group">
+                    <label for="name">Full Name</label>
+                    <input type="text" name="name" id="name" class="inputClass">
+                    <span class="inputCheck"></span>
+                </div>
+
+                <div class="group">
+                    <label for="emailAddress">Email Address</label>
+                    <input type="text" name="emailAddress" id="emailAddress" class="inputClass">
+                    <span class="inputCheck emailCheck"></span>
+                </div>
+
+                <div class="group">
+                    <label for="phone">Phone Number</label>
+                    <input type="text" name="phone" id="phone" placeholder="e.g. 04XX XXX XXX" class="inputClass">
+                    <span class="inputCheck phoneCheck"></span>
+                </div>
+
+                <div class="group">
+                    <label for="license">Driver's license</label>
+                    <select name="license" id="license" class="inputClass">
+                        <option value="Choose...">Choose...</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
+                    <span class="inputCheck optionCheck"></span>
+                </div>
+            </div>  
+        </div>      
+  
+        <div id="cart_warning"></div>
+        
+
+        <div class="priceItem">
+            <div id="priceTag">Total:</div>
+            <div id="priceSum"></div>
+
+        </div>
+
+        <div class="btn">
+            <button class="clearCart">CANCEL</button> 
+            <button class="checkOut">SUBMIT</button>
+        </div> 
+    </div>
+
+
+
+    <div id="myDelivery" class="delivery">
+        <div class="delivery-content">
+          <span class="close">&times;</span>
+          <p>Below is your order details.<br>Please Confirm your order: </p>
+
+            <div class="deliveryItem">
+                <!--div class="item">
+                <div class="deliveryName">
+                    ${foundItem.product_name || ''} 
+                </div> 
+                <div class="unit_quantity">
+                    ${foundItem.unit_quantity || ''} 
+                </div> 
+                <div class="deliveryQuantity">
+                    <span>${cart.quantity}</span>
+                </div> 
+                </div-->  
+            </div> 
+            <div class="submitbtn">
+                <a href='index.html' class="buttonSubmit">CONFIRMATION LINK</a>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script>
+        // Function to toggle the showCart class on the body element
+        const toggleShowCart = () => {
+            // Get the query parameter from the URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const showCart = urlParams.get('showCart');
+    
+            // Get the body element
+            const body = document.querySelector('body');
+    
+            // Toggle the showCart class based on the query parameter
+            if (showCart === 'true') {
+                body.classList.add('showCart');
+            } else {
+                body.classList.remove('showCart');
+            }
+        }
+    
+        // Call the toggleShowCart function when the page loads
+        window.onload = toggleShowCart;
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+
+
+</body>
+</html>
