@@ -3,7 +3,7 @@
 ## Overview
 The Online Car Rental System is a dynamic web application designed to provide a seamless and interactive car renting experience. Leveraging AJAX and JSON, this system allows users to browse, search, and reserve cars in real time without disrupting the user interface.
 
-![webpage demo](https://github.com/HENRYCCHH/Online_Car_Rental_System/tree/main/image/webpage_demo.png)
+![webpage demo](https://github.com/HENRYCCHH/Online_Car_Rental_System/blob/main/image/webpage_demo.png)
 ## Features
 - **Browse by Categories:**  
   Users can browse cars by type (e.g., Sedan, Wagon, SUV) and brand (e.g., Ford, Mazda, BMW). Clicking on a category displays all relevant cars.
